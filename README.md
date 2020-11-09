@@ -21,6 +21,23 @@ public abstract class BaseAPIController : ControllerBase
     {
         return new InternalServerErrorResult();
     }    
+
+
+
+    protected static BadGatewayObjectResult InternalServerError(string message)
+    {
+        return new BadGatewayObjectResult(message);
+    }
+
+    protected static BadGatewayObjectResult InternalServerError(ModelStateDictionary modelState)
+    {
+        return new BadGatewayObjectResult(modelState);
+    }
+
+    protected static BadGatewayResult InternalServerError()
+    {
+        return new BadGatewayResult();
+    }    
 }
 ```
 
@@ -32,6 +49,11 @@ public class MyAPIController : BaseAPIController
     public async Task<IActionResult> MyAction()
     {
         return InternalServerError("Some errormessage");
+    }
+
+        public async Task<IActionResult> MySecondAction()
+    {
+        return BadGateway("Some errormessage");
     }
 }
 ```
