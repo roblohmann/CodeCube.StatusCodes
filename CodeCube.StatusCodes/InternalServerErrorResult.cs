@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace CodeCube.StatusCodes
 {
@@ -7,19 +8,20 @@ namespace CodeCube.StatusCodes
     {
         public InternalServerErrorResult() : base((int)HttpStatusCode.InternalServerError)
         {
+            
+        }
+    }
+
+    public sealed class InternalServerErrorObjectResult : ObjectResult
+    {
+        public InternalServerErrorObjectResult(object value) : base(value)
+        {
+            StatusCode = (int) HttpStatusCode.InternalServerError;
         }
 
-        public StatusCodeResult InternalServerError()
+        public InternalServerErrorObjectResult(ModelStateDictionary modelState) : base(modelState)
         {
-            return new StatusCodeResult((int)HttpStatusCode.InternalServerError);
-        }
-
-        public ObjectResult InternalServerError(object value)
-        {
-            return new ObjectResult(value)
-            {
-                StatusCode = (int)HttpStatusCode.InternalServerError
-            };
+            StatusCode = (int)HttpStatusCode.InternalServerError;
         }
     }
 }

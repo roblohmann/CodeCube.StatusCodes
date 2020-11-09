@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace CodeCube.StatusCodes
 {
@@ -7,19 +8,20 @@ namespace CodeCube.StatusCodes
     {
         public BadGatewayResult() : base((int)HttpStatusCode.BadGateway)
         {
+
+        }
+    }
+
+    public sealed class BadGatewayObjectResult : ObjectResult
+    {
+        public BadGatewayObjectResult(object value) : base(value)
+        {
+            StatusCode = (int)HttpStatusCode.BadGateway;
         }
 
-        public StatusCodeResult BadGateway()
+        public BadGatewayObjectResult(ModelStateDictionary modelState) : base(modelState)
         {
-            return new StatusCodeResult((int)HttpStatusCode.BadGateway);
-        }
-
-        public ObjectResult BadGateway(object value)
-        {
-            return new ObjectResult(value)
-            {
-                StatusCode = (int)HttpStatusCode.BadGateway
-            };
+            StatusCode = (int)HttpStatusCode.BadGateway;
         }
     }
 }
