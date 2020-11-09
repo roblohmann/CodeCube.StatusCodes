@@ -24,17 +24,17 @@ public abstract class BaseAPIController : ControllerBase
 
 
 
-    protected static BadGatewayObjectResult InternalServerError(string message)
+    protected static BadGatewayObjectResult BadeGateway(string message)
     {
         return new BadGatewayObjectResult(message);
     }
 
-    protected static BadGatewayObjectResult InternalServerError(ModelStateDictionary modelState)
+    protected static BadGatewayObjectResult BadeGateway(ModelStateDictionary modelState)
     {
         return new BadGatewayObjectResult(modelState);
     }
 
-    protected static BadGatewayResult InternalServerError()
+    protected static BadGatewayResult BadeGateway()
     {
         return new BadGatewayResult();
     }    
