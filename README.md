@@ -51,7 +51,7 @@ public class MyAPIController : BaseAPIController
         return InternalServerError("Some errormessage");
     }
 
-        public async Task<IActionResult> MySecondAction()
+    public async Task<IActionResult> MySecondAction()
     {
         return BadGateway("Some errormessage");
     }
