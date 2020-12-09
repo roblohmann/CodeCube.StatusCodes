@@ -1,5 +1,9 @@
 # CodeCube.StatusCodes
-Small library which allows you to use 
+Small library which allows you to use objectresults for the InternalServerError and BadGateway statuscodes.
+
+![Nuget](https://img.shields.io/nuget/dt/CodeCube.StatusCodes?style=for-the-badge)
+![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/CodeCube.StatusCodes?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/roblohmann/CodeCube.StatusCodes?style=for-the-badge)
 
 ## Example .NET Core 3.x
 
