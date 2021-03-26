@@ -3,11 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeCube.StatusCodes", "CodeCube.StatusCodes\CodeCube.StatusCodes.csproj", "{CDA62DBC-BC27-4850-9DB1-D49348A2AFE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeCube.StatusCodes", "CodeCube.StatusCodes\CodeCube.StatusCodes.csproj", "{CDA62DBC-BC27-4850-9DB1-D49348A2AFE3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{60C4322A-9A58-4D61-A4A4-5B1FD4462CB6}"
 	ProjectSection(SolutionItems) = preProject
 		nuget-icon.png = nuget-icon.png
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global

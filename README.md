@@ -28,17 +28,17 @@ public abstract class BaseAPIController : ControllerBase
 
 
 
-    protected static BadGatewayObjectResult BadeGateway(string message)
+    protected static BadGatewayObjectResult BadGateway(string message)
     {
         return new BadGatewayObjectResult(message);
     }
 
-    protected static BadGatewayObjectResult BadeGateway(ModelStateDictionary modelState)
+    protected static BadGatewayObjectResult BadGateway(ModelStateDictionary modelState)
     {
         return new BadGatewayObjectResult(modelState);
     }
 
-    protected static BadGatewayResult BadeGateway()
+    protected static BadGatewayResult BadGateway()
     {
         return new BadGatewayResult();
     }    
