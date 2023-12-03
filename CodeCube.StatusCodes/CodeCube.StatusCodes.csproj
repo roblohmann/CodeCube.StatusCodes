@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>netstandard2.1;net6.0;net7.0;net8.0</TargetFrameworks>
     <Authors>Rob Lohmann</Authors>
     <Description>Libary with additional statuscode objects.</Description>
     <PackageProjectUrl>https://github.com/roblohmann/CodeCube.StatusCodes</PackageProjectUrl>
-    <Copyright>Copyright 2020 Rob Lohmann</Copyright>
+    <Copyright>Copyright 2020 - 2023 Rob Lohmann</Copyright>
     <PackageTags>httpclient httpextensions</PackageTags>
     <PackageIcon>nuget-icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/roblohmann/CodeCube.StatusCodes</RepositoryUrl>

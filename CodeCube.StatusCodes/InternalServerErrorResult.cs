@@ -4,24 +4,18 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace CodeCube.StatusCodes
 {
-    public sealed class InternalServerErrorResult : StatusCodeResult
+    public sealed class InternalServerErrorResult : ObjectResult
     {
-        public InternalServerErrorResult() : base((int)HttpStatusCode.InternalServerError)
-        {
-            
-        }
-    }
+        private const int DefaultStatusCode = (int)HttpStatusCode.InternalServerError;
 
-    public sealed class InternalServerErrorObjectResult : ObjectResult
-    {
-        public InternalServerErrorObjectResult(object value) : base(value)
+        public InternalServerErrorResult(object value) : base(value)
         {
-            StatusCode = (int) HttpStatusCode.InternalServerError;
+            StatusCode = DefaultStatusCode;
         }
 
-        public InternalServerErrorObjectResult(ModelStateDictionary modelState) : base(modelState)
+        public InternalServerErrorResult(ModelStateDictionary modelState) : base(modelState)
         {
-            StatusCode = (int)HttpStatusCode.InternalServerError;
+            StatusCode = DefaultStatusCode;
         }
     }
 }
