@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>    
-    <TargetFrameworks>netstandard2.1;net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;net6.0;net7.0;net8.0;net9.0;net10.0</TargetFrameworks>
     <Authors>Rob Lohmann</Authors>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <Description>Libary with additional statuscode objects.</Description>
     <PackageProjectUrl>https://github.com/roblohmann/CodeCube.StatusCodes</PackageProjectUrl>
-    <Copyright>Copyright 2020 - 2025 Rob Lohmann</Copyright>
+    <Copyright>Copyright 2020 - 20261 Rob Lohmann</Copyright>
     <PackageTags>httpclient httpextensions</PackageTags>
     <PackageIcon>nuget-icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/roblohmann/CodeCube.StatusCodes</RepositoryUrl>
