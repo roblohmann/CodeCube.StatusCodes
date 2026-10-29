@@ -7,6 +7,7 @@
     <PackageProjectUrl>https://github.com/roblohmann/CodeCube.StatusCodes</PackageProjectUrl>
     <RepositoryUrl>https://github.com/roblohmann/CodeCube.StatusCodes</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <VersionPrefix>6.1.4</VersionPrefix>
   </PropertyGroup>
 
 </Project>
