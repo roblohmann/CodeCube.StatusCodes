@@ -12,8 +12,15 @@
     <RepositoryUrl>https://github.com/roblohmann/CodeCube.StatusCodes</RepositoryUrl>
   </PropertyGroup>
 
-  <ItemGroup>
+  <!-- netstandard2.1: MVC via package; Newtonsoft.Json 13 overrides the vulnerable 9.0.1 that Mvc.Core 2.3.0 pulls in -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <!-- net6.0+: MVC comes with the shared framework -->
+  <ItemGroup Condition="'$(TargetFramework)' != 'netstandard2.1'">
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
