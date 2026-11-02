@@ -1,0 +1,13 @@
+<Project>
+
+  <!-- Central Package Management: alle NuGet-versies van deze repository staan hier. Projecten verwijzen alleen nog naar de package-naam. -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+</Project>
